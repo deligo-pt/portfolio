@@ -94,6 +94,14 @@ img { display: block; max-width: 100%; }
   color: var(--text);
   text-wrap: balance;
 }
+/* Gradient-text accent for highlighted words in headings (cyan → teal). */
+.grad {
+  background: var(--grad-icon);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
 .section-head .sub {
   font-size: 16px;
   color: var(--muted);

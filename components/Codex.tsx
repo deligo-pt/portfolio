@@ -15,7 +15,10 @@ export default function Codex() {
     >
       <div className="section-head">
         <span className="eyebrow">CODEX IT SERVICE</span>
-        <h2>Building the future with Codex IT Service</h2>
+        <h2>
+          Building the <span className="grad">future</span> with Codex IT
+          Service
+        </h2>
         <p className="sub">
           Mission: deliver innovative software solutions that help businesses
           scale faster.

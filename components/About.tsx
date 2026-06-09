@@ -3,7 +3,9 @@ export default function About() {
     <section className="block wrap" id="about" data-screen-label="About">
       <div className="section-head">
         <span className="eyebrow">ABOUT</span>
-        <h2>Engineer, It Manager, team builder.</h2>
+        <h2>
+          Engineer, <span className="grad">It Manager</span>, team builder.
+        </h2>
         <p className="sub">
           Meskat is a passionate Full Stack Software Engineer specializing in
           MERN Stack development. His journey started with a deep passion for

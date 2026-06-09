@@ -107,7 +107,9 @@ export default function Skills() {
     <section className="block wrap" id="skills" data-screen-label="Skills">
       <div className="section-head">
         <span className="eyebrow">SKILLS UNIVERSE</span>
-        <h2>A rotating universe of craft.</h2>
+        <h2>
+          A <span className="grad">rotating universe</span> of craft.
+        </h2>
         <p className="sub">
           Drag the sphere to explore the stack. Or browse the catalog by
           category.

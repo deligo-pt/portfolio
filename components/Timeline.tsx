@@ -3,7 +3,10 @@ export default function Timeline() {
     <section className="block wrap" id="journey" data-screen-label="Journey">
       <div className="section-head">
         <span className="eyebrow">CAREER JOURNEY</span>
-        <h2>From Developer to CEO</h2>
+        <h2>
+          From <span className="grad">Developer</span> to{" "}
+          <span className="grad">CEO</span>
+        </h2>
         <p className="sub">
           An immersive walk through the milestones that shaped the engineer and
           the IT.

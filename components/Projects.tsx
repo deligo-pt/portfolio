@@ -19,7 +19,9 @@ export default function Projects() {
     <section className="block wrap" id="projects" data-screen-label="Projects">
       <div className="section-head">
         <span className="eyebrow">FEATURED PROJECTS</span>
-        <h2>Work that ships.</h2>
+        <h2>
+          Work that <span className="grad">ships</span>.
+        </h2>
         <p className="sub">
           A selection of production-grade products — from social platforms to
           booking systems.

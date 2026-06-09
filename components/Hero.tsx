@@ -37,7 +37,7 @@ export default function Hero() {
         <h1>
           Meskat
           <br />
-          Mohammad
+          <span className="grad">Mohammad</span>
           <br />
           Abu Sayed
         </h1>

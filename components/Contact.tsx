@@ -3,7 +3,9 @@ export default function Contact() {
     <section className="block wrap" id="contact" data-screen-label="Contact">
       <div className="section-head">
         <span className="eyebrow">CONTACT</span>
-        <h2>Let&apos;s build something.</h2>
+        <h2>
+          Let&apos;s <span className="grad">build</span> something.
+        </h2>
         <p className="sub">
           Open to freelance projects, founder collaborations, and engineering
           leadership conversations.

@@ -5,7 +5,9 @@ export default function Leadership() {
       <section className="block wrap" id="leadership" data-screen-label="Leadership">
         <div className="section-head">
           <span className="eyebrow">LEADERSHIP &amp; VISION</span>
-          <h2>Beyond Coding</h2>
+          <h2>
+            Beyond <span className="grad">Coding</span>
+          </h2>
         </div>
 
         <div className="leader">
@@ -34,7 +36,9 @@ export default function Leadership() {
       >
         <div className="section-head">
           <span className="eyebrow">CERTIFICATIONS</span>
-          <h2>Credentials in a glass frame</h2>
+          <h2>
+            Credentials in a <span className="grad">glass frame</span>
+          </h2>
         </div>
 
         <div className="cert-card">
