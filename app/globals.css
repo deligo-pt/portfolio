@@ -581,6 +581,16 @@ section { scroll-margin-top: 90px; }
   background: linear-gradient(180deg, rgba(175,110,255,0.95) 0%, rgba(0,212,223,0.5) 100%);
   box-shadow: 0 0 18px -4px rgba(175,110,255,0.6);
   position: relative;
+  /* Equalizer ripple: each bar pulses on the compositor (transform only),
+     staggered by its index (--bar-i) via a negative delay so the wave
+     travels left -> right and loops seamlessly. */
+  transform-origin: bottom;
+  animation: barPulse 3.2s ease-in-out infinite;
+  animation-delay: calc(var(--bar-i, 0) * -0.2s);
+}
+@keyframes barPulse {
+  0%, 100% { transform: scaleY(0.5); }
+  50%      { transform: scaleY(1); }
 }
 .skyline .bar::after {
   content: ""; position: absolute; inset: 0;
@@ -595,6 +605,27 @@ section { scroll-margin-top: 90px; }
   border: 1px solid var(--border-10);
   border-radius: 6px; padding: 3px 8px;
   -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  /* Gentle drift around the fixed anchor position; varied per label below
+     so they never move in lockstep. */
+  animation: clabelFloat 5s ease-in-out infinite;
+  will-change: transform;
+}
+.svc-chart .clabel:nth-of-type(1) { animation: clabelFloat 4.2s ease-in-out infinite; }
+.svc-chart .clabel:nth-of-type(2) { animation: clabelDrift 5.6s ease-in-out -1.2s infinite; }
+.svc-chart .clabel:nth-of-type(3) { animation: clabelFloat 4.8s ease-in-out -0.6s infinite; }
+.svc-chart .clabel:nth-of-type(4) { animation: clabelDrift 6.2s ease-in-out -2s infinite; }
+.svc-chart .clabel:nth-of-type(5) { animation: clabelFloat 5s ease-in-out -1.5s infinite; }
+@keyframes clabelFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+@keyframes clabelDrift {
+  0%, 100% { transform: translate(0, 0); }
+  50%      { transform: translate(6px, -6px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .skyline .bar,
+  .svc-chart .clabel { animation: none; }
 }
 .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 32px; }
 .svc-item {

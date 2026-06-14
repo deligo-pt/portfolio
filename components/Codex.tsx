@@ -31,7 +31,11 @@ export default function Codex() {
           <div className="grid-lines"></div>
           <div className="skyline" id="skyline">
             {SKYLINE.map((h, i) => (
-              <div key={i} className="bar" style={{ height: `${h}%` }} />
+              <div
+                key={i}
+                className="bar"
+                style={{ height: `${h}%`, "--bar-i": i } as React.CSSProperties}
+              />
             ))}
           </div>
           <span className="clabel" style={{ left: "14%", top: "34%" }}>
